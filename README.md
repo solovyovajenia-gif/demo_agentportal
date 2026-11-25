@@ -15,8 +15,8 @@ Contractors proposed two options, both paid: a Telegram bot (hosting plus mainte
 A personal link per agent instead of a bot or CRM seats.
 
 - **Agent = company in the CRM.** No new entities. A lead belongs to an agent when its Company field points to that agent and Source = Agent.
-- **Agent page.** Five blocks: New, In progress, Client paid, Commission paid, Client declined. Data is read live from the CRM.
-- **Add lead form.** The agent submits a client; it lands in the CRM's Incoming leads with Source, Company, contact details, product, country and the agent's note already filled in. The manager only presses Accept.
+- **Agent page.** Status filters with counters (All, New, In progress, Client paid, Commission paid, Declined) and a client list. Data is read live from the CRM. Separate phone and desktop layouts.
+- **Add lead form.** The agent submits a client; it lands in the CRM's Incoming leads with Source, Company, contact details, product, country and the agent's note already filled in. The manager only presses Accept. The form validates fields inline, asks before discarding entered data and confirms the result on a success screen.
 - **Admin page.** List of agents with ready links (Copy), and a Deactivate switch for an agent who leaves. Deals stay in the CRM.
 - **Security.** Each link carries the company ID and an HMAC signature from a secret; changing the secret revokes all links. Form limits: 30 leads per hour per agent, duplicate guard, honeypot.
 - **Cost of ownership: zero.** Apps Script, the existing CRM plan, a one-file redirect on the company domain for a short link.
